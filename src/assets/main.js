@@ -18,7 +18,7 @@ function guess() {
     	showAnswer(true);
     	showReplay();
     } else if(attempt.value >= 10) {
-    	setMessage("You Lose!");
+    	setMessage("You Lose! :(");
     	showAnswer(false);
     	showReplay();
     } else {
@@ -32,7 +32,7 @@ function setHiddenFields() {
 	while(answer.value.length < 4) {
 		answer.value = "0" + answer.value;
 	}
-	attempt = "0";
+	attempt.value = "0";
 }
 
 function setMessage(message) {
