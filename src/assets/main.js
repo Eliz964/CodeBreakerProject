@@ -12,7 +12,7 @@ function guess() {
     } else {
     	attempt.value += 1;
     }
-    if(getResults(inupt.value)) {
+    if(getResults(input.value)) {
     	setMessage("You Win! :)");
     } else if(attempt >= 10) {
     	setMessage("You Lose! :(");
@@ -55,7 +55,7 @@ function getResults(input) {
 		}
 	}
 	html += '</div></div>';
-	documnet.getElementById('results').innerHTML += html;
+	document.getElementById('results').innerHTML += html;
 
 	if(answer.value == input) {
 		return true;
