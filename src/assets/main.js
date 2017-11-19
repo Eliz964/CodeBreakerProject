@@ -7,13 +7,12 @@ function guess() {
     if(answer == '' || attempt == '') {
     	setHiddenFields();
     }
-    console.log("Answer original: " + answer.value + ". Attempt: " + attempt.value);
+
     if(!validateInput(input.value)) {
-    	return;
-    }
-   	attempt.value++;
-   	console.log("Attempt #: " + attempt.value);
-   	console.log("Answer: " + answer.value);
+    	return false;
+    } else {
+   			attempt.value++;
+   		}
     
     if(getResults(input.value)) {
     	setMessage("You Win! :)");
